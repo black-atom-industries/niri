@@ -22,6 +22,7 @@ layout {
     }
 
     shadow {
+        on
         color "#f9eddd70"
     }
 }

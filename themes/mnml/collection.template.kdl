@@ -22,6 +22,7 @@ layout {
     }
 
     shadow {
+        on
         color "<%= theme.ui.bg.default %>70"
     }
 }
