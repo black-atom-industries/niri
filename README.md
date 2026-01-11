@@ -151,6 +151,10 @@ To regenerate all themes from templates:
 black-atom-core generate
 ```
 
+## Roadmap
+
+- [ ] Experiment with gradient support for focus-ring and border (niri supports `active-gradient` / `inactive-gradient`)
+
 ## Contributing
 
 Contributions are welcome! If you'd like to improve existing themes or add new features:
