@@ -94,6 +94,22 @@ Each theme file configures the following niri elements:
 
 ## Development
 
+### Installing Black Atom Core CLI
+
+To generate themes, you need the Black Atom Core CLI installed:
+
+```bash
+# Clone and enter the core repository
+git clone https://github.com/black-atom-industries/core.git
+cd core
+
+# Compile and install the CLI
+deno task cli:compile
+deno task cli:install
+```
+
+This installs the `black-atom-core` binary to `/usr/local/bin`.
+
 ### Theme Format
 
 Niri themes are partial KDL configuration files that set visual properties:
