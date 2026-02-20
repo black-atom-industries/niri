@@ -29,7 +29,7 @@ Black Atom includes multiple theme collections, each with its own distinct style
 ### Prerequisites
 
 - [Niri](https://github.com/YaLTeR/niri) Wayland compositor (v25.11+ for include support)
-- [Black Atom Core](https://github.com/black-atom-industries/core) (for generating themes)
+- [Deno](https://deno.land/) runtime (for generating themes)
 
 ### Setup
 
@@ -40,10 +40,10 @@ git clone https://github.com/black-atom-industries/niri.git ~/repos/black-atom-i
 cd ~/repos/black-atom-industries/niri
 ```
 
-2. Generate the theme files using Black Atom Core:
+2. Generate the theme files:
 
 ```bash
-black-atom-core generate
+deno task generate
 ```
 
 ## Usage
@@ -94,21 +94,17 @@ Each theme file configures the following niri elements:
 
 ## Development
 
-### Installing Black Atom Core CLI
+### Generating Themes
 
-To generate themes, you need the Black Atom Core CLI installed:
+Theme files are generated from templates using [Black Atom Core](https://jsr.io/@black-atom/core). You need [Deno](https://deno.land/) installed.
 
 ```bash
-# Clone and enter the core repository
-git clone https://github.com/black-atom-industries/core.git
-cd core
+# Generate all theme files
+deno task generate
 
-# Compile and install the CLI
-deno task cli:compile
-deno task cli:install
+# Or use watch mode for live regeneration
+deno task dev
 ```
-
-This installs the `black-atom-core` binary to `/usr/local/bin`.
 
 ### Theme Format
 
@@ -155,12 +151,12 @@ layout {
 }
 ```
 
-### Generating Themes
+### Regenerating Themes
 
 To regenerate all themes from templates:
 
 ```bash
-black-atom-core generate
+deno task generate
 ```
 
 ## Roadmap
